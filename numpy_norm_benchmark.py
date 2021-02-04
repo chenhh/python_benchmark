@@ -12,9 +12,11 @@ print(np.__config__.show())
 
 
 """
-eva00: Ubuntu 20.04.1, python 3.8, openblas
+eva00: i7 2600, 16G RAM
+Ubuntu 20.04.1, python 3.8, openblas
 took 302.79740262031555 seconds
 
-eva01: the same environment
+eva01: xeon E5-2630v4*2, 32G RAM
+the same software environment
 took 62.331828594207764 seconds
 """
