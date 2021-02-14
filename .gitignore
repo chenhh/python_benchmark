@@ -1,0 +1,59 @@
+*.py[cod]
+
+# C extensions
+*.so
+*.dll
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+*.log
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+#wiki/
+.mr.developer.cfg
+.project
+.pydevproject
+.settings
+.directory
+.idea
+__pycache__
+#*.htm[l]
+*.xz
+*.7z
+*.zip
+*.pickle
+*.pkl
+#*.jpg
+#*.jpeg
+#*.png
+*.sdb   #sqlite db
+
+# don't sync the pwd file 
+pwd.json
+
+# don't sync the static file dir
+collected_static/
+venv/
