@@ -27,6 +27,14 @@ def third_function():
     return
 
 
+def param_function(arg):
+    t_name = threading.currentThread().getName()
+    print(f"{t_name} is starting, arg={arg}")
+    time.sleep(2)
+    print(f"{t_name} is exiting")
+    return
+
+
 if __name__ == "__main__":
     # 建立Thread object
     # target 是用於 run() 方法調用的可調用對象。
@@ -36,11 +44,17 @@ if __name__ == "__main__":
                           target=second_function)
     t3 = threading.Thread(name='3rd_thread',
                           target=third_function)
-    threads = (t1, t2, t3)
+    t4 = threading.Thread(name='arg_thread',
+                          target=param_function,
+                          args=["hello world",])
+    threads = (t1, t2, t3, t4)
     # start thread
     # 建立thread時, 因為t1, t2, t3是依序建立,
     # 所以在印出starting時不會亂序
     [t.start() for t in threads]
+
+    #  查看目前有多少個執行緒
+    print(f"current acting threads: {threading.active_count()}")
 
     # wait thread finish
     # thread完成時，不一定會按照次序，所以exiting會亂序
