@@ -5,25 +5,31 @@ import time
 
 def first_function():
     t_name = threading.currentThread().getName()
-    print(f"{t_name} is starting")
+    tid = threading.get_native_id()
+    mid = threading.main_thread().native_id
+    print(f"{t_name} is starting, {tid}, {mid}")
     time.sleep(2)
-    print(f"{t_name} is exiting")
+    print(f"{t_name} is exiting, {tid}, {mid}")
     return
 
 
 def second_function():
     t_name = threading.currentThread().getName()
-    print(f"{t_name} is starting")
+    tid = threading.get_native_id()
+    mid = threading.main_thread().native_id
+    print(f"{t_name} is starting, {tid}, {mid}")
     time.sleep(2)
-    print(f"{t_name} is exiting")
+    print(f"{t_name} is exiting, {tid}, {mid}")
     return
 
 
 def third_function():
     t_name = threading.currentThread().getName()
-    print(f"{t_name} is starting")
+    tid = threading.get_native_id()
+    mid = threading.main_thread().native_id
+    print(f"{t_name} is starting, {tid}, {mid}")
     time.sleep(2)
-    print(f"{t_name} is exiting")
+    print(f"{t_name} is exiting, {tid}, {mid}")
     return
 
 

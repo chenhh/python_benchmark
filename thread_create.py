@@ -6,6 +6,9 @@ import time
 exitFlag = 0
 
 
+
+
+
 class MyThread(threading.Thread):
     def __init__(self, thread_id, name, counter):
         threading.Thread.__init__(self)
