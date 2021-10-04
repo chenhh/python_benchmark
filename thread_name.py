@@ -46,7 +46,7 @@ if __name__ == "__main__":
                           target=third_function)
     t4 = threading.Thread(name='arg_thread',
                           target=param_function,
-                          args=["hello world",])
+                          args=["hello world", ])
     threads = (t1, t2, t3, t4)
     # start thread
     # 建立thread時, 因為t1, t2, t3是依序建立,
