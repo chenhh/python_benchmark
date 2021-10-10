@@ -39,7 +39,20 @@ def find_all_quantifier():
     print(re.findall('a{3}', 'aaaa'))  # ['aaa']
     print(re.findall('a{1,2}', 'aaaa'))  # ['aa', 'aa']
 
+    print(re.findall('a??', 'aaaa'))  # ['', 'a', '', 'a', '', 'a', '', 'a', '']
+    print(re.findall('a*?', 'aaaa'))  # ['', 'a', '', 'a', '', 'a', '', 'a', '']
+    print(re.findall('a+?', 'aaaa'))  # ['a', 'a', 'a', 'a']
+    print(re.findall('a{3}?', 'aaaa'))  # ['aaa']
+    print(re.findall('a{1,2}?', 'aaaa'))  # ['a', 'a', 'a', 'a']
+
+
+def find_all_practice():
+    txt = "abaabbbbaabbbbbbbb"
+    print(re.findall("ab{3}", txt)) # ['abbb', 'abbb']
+    print(re.findall("ab{1,3}", txt))   # ['ab', 'abbb', 'abbb']
+
 
 if __name__ == '__main__':
     # find_all()
     find_all_quantifier()
+    # find_all_practice()
